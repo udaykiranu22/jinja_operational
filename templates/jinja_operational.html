@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jinja operational tags</title>
+</head>
+<body>
+    <h1>This is jinja operational Tags</h1>
+
+    <h1>Name : {{name}}, Age : {{age}}, Course : {{course}}</h1>
+    <hr>
+
+    <!-- if conditional -->
+
+    {% if age > 18 %}
+        <h3>This is just jinja if conditional tags</h3>
+        <p>You're eligiable for vote</p>
+    {% endif %}
+    <hr>
+
+    <!-- if else conditional -->
+    
+    {% if age > 21 %}
+        <h3>This is just jinja if else conditional tags</h3>
+        <p>You're eligiable to marry</p>
+    {% else %}
+        <h3>This is just jinja is else conditional tags</h3>
+        <p>You're eligiable to marry</p>
+    {% endif %}
+    <hr>
+
+    <!-- if elif else conditional -->
+
+    {% if age < 18 %}
+        <h3>This is just jinja if-elif else conditional tags</h3>
+        <p>child marriage</p>
+    {% elif age > 18 and age < 30 %}
+        <h3>This is just jinja elif-else conditional tags</h3>
+        <p>legal marriage</p>
+    {% else %}
+        <h3>This is just jinja else conditional tags</h3>
+        <p>late marriage</p>
+    {% endif %}
+    <hr>
+
+    <!-- nested if conditional -->
+
+    {% if FE %}
+        {% if BE %}
+            <h3>This is just jinja nested if conditional tags</h3>
+            <p>you're fullstack is completed</p>
+        {% else %}
+            <h3>This is just jinja nested else conditional tags</h3>
+            <p>you're not fullstack is completed</p>
+            <p>complete you're backend</p>
+            {% endif %}
+    {% else %}
+        {% if BE %}
+            <h3>This is just jinja nested if conditional tags</h3>
+            <p>you're not fullstack is completed</p>
+            <p>complete you're frontend</p>
+        {% else %}
+            <h3>This is just jinja nested else conditional tags</h3>
+            <p>you're not fullstack is completed</p>
+            <p>complete you're both frontend and backend</p>    
+        {% endif %}
+    {% endif %}
+    <hr>
+
+    <!-- for loop statement -->
+    <h3>This is just jinja for loop statement</h3>
+    {% for i in name %}
+        <p>{{ i }}</p>
+    {% endfor %}
+
+</body>
+</html>
